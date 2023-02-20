@@ -10,6 +10,8 @@ def todo_list(request):
         "todos":todos
     }
     return render(request,'list.html',context)
+
+    
 def todo_add(request):
     form=TodoForm(request.POST or None)
     if form.is_valid():
